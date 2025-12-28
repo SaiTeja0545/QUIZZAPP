@@ -1,0 +1,200 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "question": "What is HTML?",
+      "options": [
+        "Hyper Text Markup Language",
+        "High Text Machine Language",
+        "Hyper Tool Markup Language",
+        "None"
+      ],
+      "answer": "Hyper Text Markup Language"
+    },
+    {
+      "id": "2",
+      "question": "What is CSS?",
+      "options": [
+        "Cascading Style Sheets",
+        "Creative Style System",
+        "Colorful Style Syntax",
+        "None"
+      ],
+      "answer": "Cascading Style Sheets"
+    },
+    {
+      "id": "72d8",
+      "question": "What is java?",
+      "options": [
+        "object oriented",
+        "c++",
+        "python",
+        "javascript"
+      ],
+      "answer": "object oriented"
+    },
+    {
+      "id": "cd72",
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyper Text Markup Language",
+        "High Text Machine Language",
+        "Hyperlinks and Text Markup Language",
+        "Home Tool Markup Language"
+      ],
+      "answer": "Hyper Text Markup Language"
+    },
+    {
+      "id": "f26e",
+      "question": "Which CSS property is used to change text color?",
+      "options": [
+        "text-color",
+        "color",
+        "font-color",
+        "background-color"
+      ],
+      "answer": "color"
+    },
+    {
+      "id": "0bf1",
+      "question": "Which of the following is NOT a JavaScript data type?",
+      "options": [
+        "Number",
+        "String",
+        "Boolean",
+        "Character"
+      ],
+      "answer": "Character"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "isAdmin": true
+    },
+    {
+      "id": "acc5",
+      "username": "SaiTeja",
+      "password": "saitej@123",
+      "isAdmin": false
+    },
+    {
+      "id": "9be3",
+      "username": "Teja",
+      "password": "teja@123",
+      "isAdmin": false
+    },
+    {
+      "id": "7c6c",
+      "username": "Tejas",
+      "password": "teja@1234",
+      "isAdmin": false
+    },
+    {
+      "id": "48bd",
+      "username": "sai",
+      "password": "sai@123",
+      "isAdmin": false
+    },
+    {
+      "id": "c741",
+      "username": "ram",
+      "password": "ram123",
+      "isAdmin": false
+    },
+    {
+      "id": "be53",
+      "username": "tej",
+      "password": "tej123",
+      "isAdmin": false
+    },
+    {
+      "id": "47b1",
+      "username": "seshu",
+      "password": "seshu123",
+      "isAdmin": false
+    },
+    {
+      "id": "18ee",
+      "username": "sunny",
+      "password": "sunny123",
+      "isAdmin": false
+    }
+  ],
+  "quiz_scores": [
+    {
+      "id": "953a",
+      "username": "Teja",
+      "score": 6,
+      "total": 6,
+      "percentage": 100,
+      "timestamp": "2025-12-21T17:05:11.935Z"
+    },
+    {
+      "id": "580d",
+      "username": "Teja",
+      "score": 6,
+      "total": 6,
+      "percentage": 100,
+      "timestamp": "2025-12-21T17:05:31.025Z"
+    },
+    {
+      "id": "c154",
+      "username": "Teja",
+      "score": 6,
+      "total": 6,
+      "percentage": 100,
+      "timestamp": "2025-12-21T17:05:55.121Z"
+    },
+    {
+      "id": "2605",
+      "username": "Tejas",
+      "score": 4,
+      "total": 6,
+      "percentage": 67,
+      "timestamp": "2025-12-21T17:20:01.710Z"
+    },
+    {
+      "id": "b43a",
+      "username": "Tejas",
+      "score": 4,
+      "total": 6,
+      "percentage": 67,
+      "timestamp": "2025-12-21T17:20:26.085Z"
+    },
+    {
+      "id": "037b",
+      "username": "Tejas",
+      "score": 4,
+      "total": 6,
+      "percentage": 67,
+      "timestamp": "2025-12-21T17:23:57.756Z"
+    },
+    {
+      "id": "cf94",
+      "username": "Tejas",
+      "score": 1,
+      "total": 6,
+      "percentage": 17,
+      "timestamp": "2025-12-21T17:27:28.347Z"
+    },
+    {
+      "id": "241d",
+      "username": "Tejas",
+      "score": 3,
+      "total": 6,
+      "percentage": 50,
+      "timestamp": "2025-12-21T17:29:28.937Z"
+    },
+    {
+      "id": "5a8d",
+      "username": "Tejas",
+      "score": 2,
+      "total": 6,
+      "percentage": 33,
+      "timestamp": "2025-12-21T17:30:07.896Z"
+    }
+  ]
+}

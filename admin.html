@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz question</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz-container">
+  <div class="top-header">
+    <span id="userInfo"></span>
+    <button id="logoutBtn">Logout</button>
+  </div>
+  <h2>Add New Question</h2>
+
+  <input type="text" id="question" placeholder="Enter question" />
+
+  <input type="text" id="opt1" placeholder="Option 1" />
+  <input type="text" id="opt2" placeholder="Option 2" />
+  <input type="text" id="opt3" placeholder="Option 3" />
+  <input type="text" id="opt4" placeholder="Option 4" />
+
+  <input type="text" id="answer" placeholder="Correct answer" />
+
+  <button onclick="addQuestion()">Add Question</button>
+
+  <p id="msg"></p>
+</div>
+<link rel="stylesheet" href="style.css">
+<script src="auth.js"></script>
+<script>
+  // Protect this page — redirect if not admin
+  requireAdmin();
+  // show logged in user and wire logout
+  const u = getCurrentUser();
+  const userInfo = document.getElementById('userInfo');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const user = getCurrentUser();
+if (!user.isAdmin) {
+  scores = scores.filter(s => s.username === user.username);
+}
+  if (u && userInfo) userInfo.innerText = `Logged in: ${u.username}`;
+  if (logoutBtn) logoutBtn.addEventListener('click', () => logout());
+</script>
+<script>requireAdmin();</script>
+
+<script src="addQuestion.js"></script>
+</body>
+</html>

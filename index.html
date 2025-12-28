@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>API Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Only redirect to login when there is no logged-in user
+    (function() {
+      try {
+        const user = JSON.parse(localStorage.getItem('quiz_user'));
+        if (!user) {
+          // replace to prevent back navigation
+          try { location.replace('quiz.html'); } catch (e) { window.location.href = 'quiz.html'; }
+        }
+      } catch (e) {
+        try { location.replace('quiz.html'); } catch (err) { window.location.href = 'quiz.html'; }
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- <header class="top-header">
+    <span id="userInfo"></span>
+    <div class="header-actions">
+      <button id="scoreBtn" class="hidden">Scorecard</button>
+      <button id="logoutBtn" class="hidden">Logout</button>
+    </div>
+  </header> -->
+
+  <!-- Instruction Screen -->
+  <div id="instructionBox" class="card">
+    <h2>Quiz Instructions</h2>
+    <ul>
+      <li>Total time: <strong>5 minutes</strong></li>
+      <li>Each question has one correct answer</li>
+      <li>No going back to previous questions</li>
+      <li>Quiz auto-submits when time ends</li>
+    </ul>
+    <button id="startBtn">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quizBox" class="card hidden">
+    <div class="top-bar">
+      <span id="questionNumber"></span>
+      <span id="timer"></span>
+    </div>
+
+    <h3 id="question"></h3>
+    <div id="options"></div>
+    <div class="controls">
+      <button id="nextBtn" disabled>Next</button>
+    </div>
+
+    <div class="progress-wrap">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
+  </div>
+  <script src="apiConfig.js"></script>
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+  <script>
+    // show logged-in user and wire logout; if not logged in show login link instead of Start
+    const user = getCurrentUser();
+    const uInfo = document.getElementById('userInfo');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const startBtn = document.getElementById('startBtn');
+
+    if (user && uInfo) {
+      uInfo.innerText = `Logged in: ${user.username}`;
+      if (logoutBtn) {
+        logoutBtn.classList.remove('hidden');
+        logoutBtn.addEventListener('click', () => logout());
+      }
+      // show scorecard button for all logged-in users
+      const scoreBtn = document.getElementById('scoreBtn');
+      if (scoreBtn) {
+        scoreBtn.classList.remove('hidden');
+        scoreBtn.addEventListener('click', () => location.href = 'score.html');
+      }
+    } else {
+      // replace start button with a login link so quiz cannot be started
+      if (startBtn) {
+        const link = document.createElement('a');
+        link.href = 'login.html';
+        link.className = 'start-link';
+        link.innerText = 'Login to Start';
+        startBtn.parentNode.replaceChild(link, startBtn);
+      }
+    }
+  </script>
+</body>
+</html>

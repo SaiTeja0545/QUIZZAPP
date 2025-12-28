@@ -1,0 +1,386 @@
+/* ---------------- RESET & BASE ---------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+/* ---------------- COMMON ---------------- */
+.hidden {
+  display: none;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------------- LANDING PAGE ---------------- */
+.landing-container {
+  background: #fff;
+  padding: 50px 40px;
+  width: 360px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #4a4aef;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.login-btn {
+  background: #4a4aef;
+  color: white;
+}
+
+.signup-btn {
+  background: #2ecc71;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* ---------------- AUTH (LOGIN / REGISTER) ---------------- */
+.auth-card {
+  background: white;
+  padding: 35px 30px;
+  width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a4aef;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: #4a4aef;
+  color: white;
+  font-weight: 600;
+}
+
+.auth-card p {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.admin-checkbox {
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* ---------------- HEADER ---------------- */
+.top-header {
+  width: 420px;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.top-header button {
+  padding: 6px 10px;
+  font-size: 13px;
+  background: #4a4aef;
+  color: white;
+}
+
+/* ---------------- QUIZ CARD ---------------- */
+.card {
+  background: white;
+  padding: 25px;
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+#question {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+#options button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #f0f2f5;
+  border-radius: 6px;
+}
+
+#options button:hover {
+  background: #dfe4ff;
+}
+
+/* ---------------- ANSWER STATES ---------------- */
+.correct {
+  background: #2ecc71 !important;
+  color: white;
+}
+
+.wrong {
+  background: #e74c3c !important;
+  color: white;
+}
+
+/* ---------------- CONTROLS ---------------- */
+.controls button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  background: #4a4aef;
+  color: white;
+  font-weight: 600;
+}
+
+/* ---------------- PROGRESS BAR ---------------- */
+.progress-wrap {
+  margin-top: 15px;
+  background: #e6e9ee;
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #6ab7ff, #4a4aef);
+  transition: width 0.3s ease;
+}
+
+/* ---------------- START LINK ---------------- */
+.start-link {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: #4a4aef;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ---------------- ADMIN PAGE ---------------- */
+.quiz-container {
+  background: white;
+  padding: 30px;
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.quiz-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.quiz-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.quiz-container button {
+  width: 100%;
+  padding: 12px;
+  background: #2ecc71;
+  color: white;
+  font-weight: 600;
+}
+
+/* ---------------- LEADERBOARD ---------------- */
+.container {
+  background: white;
+  padding: 30px;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.leaderboard th,
+.leaderboard td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.leaderboard th {
+  background: #4a4aef;
+  color: white;
+}
+
+.leaderboard tr:nth-child(even) {
+  background: #f7f8ff;
+}
+
+.no-data {
+  text-align: center;
+  padding: 15px;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  flex: 1;
+  background: #4a4aef;
+  color: white;
+  padding: 10px;
+}
+
+.btn-secondary {
+  flex: 1;
+  background: #3498db;
+  color: white;
+  padding: 10px;
+}
+
+.btn-logout {
+  flex: 1;
+  background: #e74c3c;
+  color: white;
+  padding: 10px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 600px) {
+  .card,
+  .auth-card,
+  .quiz-container,
+  .container,
+  .top-header {
+    width: 100%;
+  }
+
+  body {
+    padding: 20px;
+  }
+}
+
+/* ---------------- RESULT ACTION BUTTONS ---------------- */
+.result-actions {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.result-actions button {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+/* Restart */
+.btn-restart {
+  background: linear-gradient(135deg, #4a4aef, #6a7bff);
+  color: white;
+}
+
+.btn-restart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(74, 74, 239, 0.4);
+}
+
+/* Scorecard */
+.btn-score {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+}
+
+.btn-score:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
+}
+
+/* Logout */
+.btn-logout {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+}
+
+.btn-logout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+}

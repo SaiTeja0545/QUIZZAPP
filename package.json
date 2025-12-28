@@ -1,0 +1,10 @@
+{
+  "name": "quizzapp",
+  "version": "1.0.0",
+  "scripts": {
+    "serve:db": "json-server --watch \"db.json\" --port 3000"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.3"
+  }
+}

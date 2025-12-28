@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scorecard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+    <div class="container">
+    <h1>🏆 Top 10 Leaderboard</h1>
+    
+    <table class="leaderboard" id="leaderboardTable">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Username</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        <tr>
+          <td colspan="3" class="no-data">Loading...</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="buttons">
+      <button class="btn-primary" onclick="location.href='index.html?start=1'">Take Quiz</button>
+      <button class="btn-secondary" onclick="location.href='index.html'">Back to Home</button>
+      <button class="btn-logout" onclick="logout()">Logout</button>
+    </div>
+  </div>
+  <script src="apiConfig.js"></script>
+  <script src="score.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Score</title>
+</head>
+<body>
+
+<h2 id="result">Loading...</h2>
+
+<button onclick="goLeaderboard()">View Scorecard</button>
+<button onclick="logout()">Logout</button>
+
+<script src="score.js"></script>
+</body>
+</html>
+
+
+
+
