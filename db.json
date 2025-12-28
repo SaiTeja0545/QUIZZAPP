@@ -121,6 +121,12 @@
       "username": "sunny",
       "password": "sunny123",
       "isAdmin": false
+    },
+    {
+      "id": "6ab2",
+      "username": "raj",
+      "password": "raj123",
+      "isAdmin": false
     }
   ],
   "quiz_scores": [

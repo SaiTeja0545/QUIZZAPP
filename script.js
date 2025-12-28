@@ -1,5 +1,5 @@
 
-const API_URL = "https://quizzapp-9l86.onrender.com";
+const API_URL = "https://quizzapp-9l86.onrender.com.questions";
 
 let questions = [];
 let currentIndex = 0;
