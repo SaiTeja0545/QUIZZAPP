@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:3000/questions";
+const API_URL = APP_CONFIG.API_BASE + APP_CONFIG.QUESTIONS;
 
 let questions = [];
 let currentIndex = 0;
