@@ -1,4 +1,4 @@
-const API_URL = "https://quiz-backend.onrender.com/questions";
+const API_URL = "http://localhost:3000/questions";
 
 async function addQuestion() {
   const question = document.getElementById("question").value;
