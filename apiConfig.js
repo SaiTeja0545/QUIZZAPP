@@ -1,7 +1,7 @@
 // apiConfig.js
 (function () {
   const CONFIG = Object.freeze({
-    API_BASE: "http://localhost:3000",
+    API_BASE: "https://quizzapp-9l86.onrender.com",
     QUESTIONS: "/questions",
     USERS: "/users",
     SCORES: "/quiz_scores"

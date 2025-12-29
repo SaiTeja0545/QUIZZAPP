@@ -1,5 +1,7 @@
 
-const API_URL = "http://localhost:3000/questions";
+const QUESTIONS_URL = (window.APP_CONFIG && APP_CONFIG.API_BASE)
+  ? `${APP_CONFIG.API_BASE}${APP_CONFIG.QUESTIONS}`
+  : '/questions';
 
 let questions = [];
 let currentIndex = 0;
@@ -48,7 +50,7 @@ startBtn.addEventListener("click", async () => {
 
 /* ---------------- FETCH QUESTIONS ---------------- */
 async function fetchQuestions() {
-  const res = await fetch(API_URL);
+  const res = await fetch(QUESTIONS_URL);
   const data = await res.json();
   questions = data;
 }

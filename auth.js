@@ -42,7 +42,7 @@ async function registerUser() {
 
     const user = { username, password, isAdmin: false };
 
-    const create = await fetch(`${API_BASE}/users`, {
+    const create = await fetch(`${API_BASE}${APP_CONFIG.USERS}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user)

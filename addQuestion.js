@@ -1,4 +1,6 @@
-const API_URL = "http://localhost:3000/questions";
+const API_URL = (window.APP_CONFIG && APP_CONFIG.API_BASE)
+  ? `${APP_CONFIG.API_BASE}${APP_CONFIG.QUESTIONS}`
+  : '/questions';
 
 async function addQuestion() {
   const question = document.getElementById("question").value;
@@ -39,7 +41,7 @@ async function addQuestion() {
   }
 }
 
-// const API_URL = "http://localhost:3000/questions";
+// legacy: // const API_URL = "http://localhost:3000/questions";
 
 // const questions = [
 //   {
